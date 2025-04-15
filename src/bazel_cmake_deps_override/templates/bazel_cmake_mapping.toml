@@ -1,0 +1,61 @@
+[[bazel_cmake_mapping]]
+bazel_module = "eigen"
+cmake_package = "Eigen3"
+conda_package = "eigen"
+targets = [
+  { cmake_target = "Eigen3::Eigen", bazel_target = "eigen" }
+]
+
+[[bazel_cmake_mapping]]
+bazel_module = "catch2"
+cmake_package = "Catch2"
+conda_package = "catch2"
+targets = [
+  { cmake_target = "Catch2::Catch2WithMain", bazel_target = "catch2_main" },
+  { cmake_target = "Catch2::Catch2", bazel_target = "catch2" }
+]
+
+[[bazel_cmake_mapping]]
+bazel_module = "osqp"
+cmake_package = "osqp"
+conda_package = "libosqp"
+targets = [
+  { cmake_target = "osqp::osqp", bazel_target = "osqp" }
+]
+
+[[bazel_cmake_mapping]]
+bazel_module = "cli11"
+cmake_package = "CLI11"
+conda_package = "cli11"
+targets = [
+  { cmake_target = "CLI11::CLI11", bazel_target = "cli11" }
+]
+
+[[bazel_cmake_mapping]]
+bazel_module = "libxml2"
+cmake_package = "LibXml2"
+conda_package = "libxml2"
+targets = [
+  { cmake_target = "LibXml2::LibXml2", bazel_target = "libxml2" }
+]
+
+[[bazel_cmake_mapping]]
+bazel_module = "libyaml"
+cmake_package = "yaml"
+conda_package = "yaml"
+targets = [
+  { cmake_target = "yaml", bazel_target = "libyaml" }
+]
+
+[[bazel_cmake_mapping]]
+bazel_module = "nlohmann_json"
+cmake_package = "nlohmann_json"
+conda_package = "nlohmann_json"
+targets = [
+  { cmake_target = "nlohmann_json::nlohmann_json", bazel_target = "json" }
+]
+
+# This is just a list of bazel modules we do not list as the default mapping of
+# cmake_package named {bazel_module}, single cmake target called {bazel_module}::{bazel_module}
+# and conda package named {bazel_module} works fine
+# fmt, spdlog, open62541, pugixml
