@@ -37,5 +37,10 @@ bazel --bazelrc=./bazel-cmake-deps-overrides/bazelrc test //...
 
 ## FAQs
 
+Q: Why is something like that required at all?
+A: See https://github.com/bazelbuild/bazel/issues/20947 and https://github.com/bazelbuild/bazel/discussions/20581 for some related Bazel issues.
+
 Q: Why are you using an external Python script, instead of doing this inside `bazel` itself?
 A: I have no idea how to do that inside bazel itself, if you have any suggestion feel free to open an issue!
+
+
